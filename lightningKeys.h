@@ -1,10 +1,7 @@
 /*
- * File:   bitpay.h
- * Author: paul
- *
- * Created on April 27, 2015, 3:44 PM
+ * File: lightningKeys.h
+ * Authors: Alexander Leitner & Paul Daigle
  */
-
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -29,8 +26,8 @@
 #define RIPEMD_AND_PADDING_HEX_STRING 45
 #define CHECKSUM 8
 #define CHECKSUM_STRING 9
-#define SIN 35 
-#define SIN_STRING 36 
+#define SIN 35
+#define SIN_STRING 36
 
 int generatePem(char **pem);
 int generateSinFromPem(char *pem, char **sin);

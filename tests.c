@@ -1,4 +1,4 @@
-#include "bitpay.h"
+#include "lightningKeys.h"
 
 static void runPemTest();
 static void runPublicKeyTest();
@@ -22,11 +22,11 @@ static void runSignatureTest() {
     char *expected_start = calloc(5, sizeof(char));
 
     pem[239]='\0';
-    
+
     if (generatePem(&pem) == ERROR) {
         printf("Error in generatePem");
     }
-    
+
     signa = signMessageWithPem(message, pem, &signature);
     if (signa == ERROR) {
         printf("Signature Error.\n");
